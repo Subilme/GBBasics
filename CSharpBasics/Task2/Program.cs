@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Task2
 {
@@ -6,9 +7,7 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            int num = Convert.ToInt32(Console.ReadLine());
-            string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
-            Console.WriteLine(months[num - 1]);
+            Console.WriteLine(Console.ReadLine().Split().Select(int.Parse).Sum());
         }
     }
 }
