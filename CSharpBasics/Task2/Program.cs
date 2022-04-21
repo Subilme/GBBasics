@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.IO;
 
 namespace Task2
 {
@@ -7,7 +7,7 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Console.ReadLine().Split().Select(int.Parse).Sum());
+            File.AppendAllText("start.txt", Convert.ToString(DateTime.Now));
         }
     }
 }
